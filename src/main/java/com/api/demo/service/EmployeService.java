@@ -18,11 +18,11 @@ public class EmployeService {
 	private EmployeRepository employeRepository; // injection d'une instance de type Repository dans cette classe.
 	
 	public Optional<Employe> getEmploye(final Long id){
-		return employeRepository.findById(id);
+		return employeRepository.findById(id); 
 	}
 	
 	public Iterable<Employe> getEmploye(){
-		return employeRepository.findAll();
+		return employeRepository.findAll(); 
 	}
 	
 	public void deleteEmploye(final Long id) {
@@ -30,8 +30,8 @@ public class EmployeService {
 	}
 	
 	public Employe saveEmploye(Employe employe) {
-		Employe saveEmploye = employeRepository.save(employe);
-		return saveEmploye; 
+		Employe savedEmploye = employeRepository.save(employe);
+		return savedEmploye; 
 	}
 
 }

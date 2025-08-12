@@ -3,6 +3,7 @@ package com.api.demo.controller;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -76,6 +77,13 @@ public class EmployeController {
 		}else {
 			return null; 
 		}
+		}
+		
+	
+	@DeleteMapping("/employe/{id}")
+	public void deleteEmploye(@PathVariable Long id) {
+		employeService.deleteEmploye(id);
+		
 	}
-
 }
+
